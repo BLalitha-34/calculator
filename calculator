@@ -1,0 +1,89 @@
+def add(a, b):
+    return a + b
+def subtract(a, b):
+    return a - b
+def multiply(a, b):
+    return a * b
+def divide(a, b):
+    if b == 0:
+        return "Error: Cannot divide by zero"
+    return a / b
+print("===== Python Calculator =====")
+while True:
+    print("\nChoose an operation:")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Exit")
+    choice = input("Enter your choice: ")
+    if choice == "5":
+        print("Calculator closed.")
+        break
+    if choice in ["1", "2", "3", "4"]:
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+            if choice == "1":
+                result = add(num1, num2)
+            elif choice == "2":
+                result = subtract(num1, num2)
+            elif choice == "3":
+                result = multiply(num1, num2)
+            else:
+                result = divide(num1, num2)
+            print("Result:", result)
+        except ValueError:
+            print("Please enter valid numbers.")
+    else:
+        print("Invalid choice. Please try again.")
+OUTPUT:
+===== Python Calculator =====
+Choose an operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice: 1
+Enter first number: 23
+Enter second number: 45
+Result: 68.0
+Choose an operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice: 3
+Enter first number: 65
+Enter second number: 3
+Result: 195.0
+Choose an operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice: 4
+Enter first number: 67
+Enter second number: 90
+Result: 0.7444444444444445
+Choose an operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice: 2
+Enter first number: 32
+Enter second number: 45
+Result: -13.0
+Choose an operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice: 5
+Calculator closed.
